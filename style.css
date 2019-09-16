@@ -108,7 +108,11 @@ footer{
 }
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
-    
+    #logo-div{
+        float: left;
+        margin-top: 20px;
+        overflow: hidden;
+    }
     .nav-div.responsive {position: relative; padding-top: 20px;}
     .nav-div.responsive a.icon {
       position: absolute;
@@ -152,6 +156,11 @@ footer{
   
   /* Tablet Styles */
   @media only screen and (min-width: 401px) and (max-width: 960px) {
+    #logo-div{
+        float: left;
+        margin-top: 20px;
+        overflow: hidden;
+    }
     .nav-div.responsive {position: relative; padding-top: 20px;}
     .nav-div.responsive a.icon {
       position: absolute;
@@ -189,7 +198,26 @@ footer{
         left: 25%;
     }
     .image-div img{
-        height: 30vh;
+        height: 50vh;
+    }
+  }
+  @media only screen and (min-width:961px) and (max-width: 1240px){
+    .content-fields h2{
+        font-family: 'Lobster Two', cursive;
+    font-weight: bold;
+    font-size: 30px;
+    color: #03BFFB;
+    }
+    .content-fields p{
+        margin-top: -20px;
+        font-size: 25px;
+    }
+    .image-div{
+        float: right;
+    }
+
+    .image-div img{
+        height: 50vh;
     }
   }
   /* #nav-div{
