@@ -109,19 +109,44 @@ footer{
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
     
-    .image-div img{
-        height: 50vh;
-    }
-    .nav-div.responsive {position: relative;}
+    .nav-div.responsive {position: relative; padding-top: 20px;}
     .nav-div.responsive a.icon {
       position: absolute;
       right: 0;
       top: 0;
     }
+    .nav-div a.icon {
+        float: right;
+        display: block;
+      }
     .nav-div.responsive a {
       float: none;
       display: block;
+      padding-top: 20px;
       text-align: left;
+    }
+    .nav-div a{display: none;}
+
+
+
+    .content-fields h2{
+        font-family: 'Lobster Two', cursive;
+    font-weight: bold;
+    font-size: 25px;
+    color: #03BFFB;
+    font-weight: bold;
+    }
+    .content-fields p{
+        margin-top: -20px;
+        font-size: 25px;
+    }
+    .image-div{
+        float: none;
+        position: relative;
+        left: 25%;
+    }
+    .image-div img{
+        height: 30vh;
     }
   }
   
