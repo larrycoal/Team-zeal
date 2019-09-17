@@ -9,18 +9,29 @@ function myFunction() {
  //i apologise for the terrible variable names
   var Vpass = document.getElementById("view")
   var Pfield =document.getElementById("password")
+  var log = document.getElementById('login')
+  var sign =document.getElementById('signup')
  
 
 
   function togglepassword(){
-    if (Pfield.type ="password"){
+    if (Pfield.type =="password"){
       Pfield.type ="text";
-    }else{
+    }else {
       Pfield.type="password"
     }
   }
 
   Vpass.addEventListener("click",function(){
      togglepassword();
+  })
+
+  sign.addEventListener('click',function(){
+    log.classList.remove("active")
+    sign.classList.add("active")
+  })
+  log.addEventListener('click',function(){
+    sign.classList.remove("active")
+    log.classList.add("active")
   })
  
