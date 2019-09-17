@@ -27,11 +27,11 @@ body a:hover{
 }
 .nav-div{
     float: right;
-    
+
     word-spacing: 10px;
     font-size: 20px;
     padding-right: 10px;
-    
+
 }
 .nav-div .icon {
     display: none;
@@ -106,6 +106,19 @@ footer{
 .clear{
     clear: both;
 }
+
+
+/*====ERROR MSG STYLES====*/
+#error_message{
+    font-size: 1.3rem;
+
+    margin-top: 2rem;
+    background: rgb(206, 36, 36);
+    color: white;
+    padding: 1rem 2.2rem;
+    display: none;
+
+}
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
     #logo-div{
@@ -153,7 +166,7 @@ footer{
         height: 30vh;
     }
   }
-  
+
   /* Tablet Styles */
   @media only screen and (min-width: 401px) and (max-width: 960px) {
     #logo-div{
@@ -201,6 +214,8 @@ footer{
         height: 50vh;
     }
   }
+
+
   @media only screen and (min-width:961px) and (max-width: 1240px){
     .content-fields h2{
         font-family: 'Lobster Two', cursive;
@@ -222,7 +237,7 @@ footer{
   }
   /* #nav-div{
     float: right;
-    
+
     word-spacing: 10px;
     font-size: 20px;
     padding-right: 10px;
