@@ -1,32 +1,37 @@
 function myFunction() {
-  var x = document.getElementById("nav-div");
-  if (x.className === "nav-div") {
-    x.className += " responsive";
-  } else {
-    x.className = "nav-div";
+    var x = document.getElementById("nav-div");
+    if (x.className === "nav-div") {
+      x.className += " responsive";
+    } else {
+      x.className = "nav-div";
+    }
   }
-}
+ //i apologise for the terrible variable names
+  var Vpass = document.getElementById("view")
+  var Pfield =document.getElementById("password")
+  var log = document.getElementById('login')
+  var sign =document.getElementById('signup')
+ 
 
-function validate() {
-  var name = document.getElementById("name").value;
-  var password = document.getElementById("password").value;
-  var error_message = document.getElementById("error_message");
 
-  var text;
-  if (name.length < 4) {
-    text = "Name too short. Please enter a valid Name";
-    error_message.style.display = "inline-block";
-    error_message.innerHTML = text;
-    return false;
-  }
-
-  if (password.length < 8) {
-    text = "Password is too short. Please enter a valid password";
-    error_message.style.display = "inline-block";
-    error_message.innerHTML = text;
-    return false;
+  function togglepassword(){
+    if (Pfield.type =="password"){
+      Pfield.type ="text";
+    }else {
+      Pfield.type="password"
+    }
   }
 
-  alert("Form Submitted Successfully!");
-  return true;
-}
+  Vpass.addEventListener("click",function(){
+     togglepassword();
+  })
+
+  sign.addEventListener('click',function(){
+    log.classList.remove("active")
+    sign.classList.add("active")
+  })
+  log.addEventListener('click',function(){
+    sign.classList.remove("active")
+    log.classList.add("active")
+  })
+ 
