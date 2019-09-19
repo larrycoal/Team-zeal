@@ -2,50 +2,32 @@
 session_start();
 //header('location:login.php');
 
-$con = mysqli_connect('localhost', 'root', '');
+$con = mysqli_connect('localhost', 'id10927548_teamzeal', '12345678@');
 
-mysqli_select_db($con, 'registration');
+mysqli_select_db($con, 'id10927548_registeration');
 
 $username = $_POST['username'];
 $email = $_POST['email'];
 $password = $_POST['password'];
 
-$safe = "select * from users where name = '$username'";
-
+$safe = "select * from users where name = '$username'" ;
+$mail = "select * from users where email = '$email'" ;
 $result = mysqli_query($con, $safe);
+$mailresult = mysqli_query($con, $mail);
 
 $num = mysqli_num_rows($result);
-
+$num2 = mysqli_num_rows($mailresult);
 if ($num == 1) {
     echo "Username Already Taken";
-} else {
-    $reg = "insert into users(name , email , password) values('$username', '$email'  , '$password')";
+} elseif ($num2 > 0) {
+    echo "Email Already Taken";
+
+}
+ else {
+     $reg = "insert into users(name , email , password) values('$username', '$email'  , '$password')";
     mysqli_query($con, $reg);
-    echo"Registration Successful";}
+    $_SESSION['username'] = $username;
+      header('location:home.php'); }
 
-// $servername = "localhost";
-// $username = "root";
-// $password = "";
-// $dbname = "registeration";
 
-// // Create connection
-// $conn = mysqli_connect($servername, $username, $password, $dbname);
-// // Check connection
-// if (!$conn) {
-//     die("Connection failed: " . mysqli_connect_error());
-// }
-// $username = $_POST['username'];
-// $email = $_POST['email'];
-// $password = $_POST['password'];
-
-// $sql = "INSERT INTO MyGuests (firstname, lastname, email)
-// VALUES ($username, $email, $password)";
-
-// if (mysqli_query($conn, $sql)) {
-//     echo "New record created successfully";
-// } else {
-//     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-// }
-
-// mysqli_close($conn);
 ?>
