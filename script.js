@@ -1,3 +1,4 @@
+
 function myFunction() {
     var x = document.getElementById("nav-div");
     if (x.className === "nav-div") {
@@ -35,3 +36,6 @@ function myFunction() {
     log.classList.add("active")
   })
  
+
+
+  
